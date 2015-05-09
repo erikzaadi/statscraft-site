@@ -1,0 +1,235 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>StatsCraft</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/social-share-kit.css">
+
+        <link rel="icon" href="favicon.png">
+        <link rel="apple-touch-icon" href="favicon.png">
+
+        <!-- Application-specific meta tags -->
+        <meta name="application-name" content="Application Name">
+        <meta name="msapplication-TileColor" content="">
+        <meta name="msapplication-TileImage" content="">
+        <meta name="msapplication-square150x150logo" content="">
+        <meta name="msapplication-square310x310logo" content="">
+        <meta name="msapplication-square70x70logo" content="">
+        <meta name="msapplication-wide310x150logo" content="">
+        <meta name="twitter:card" content="">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:url" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+    </head>
+    <body>
+        <header>
+            <div class="top-head row">
+                <div class="logo">
+                    <a href="#" title="Statscraft Monitoring Conference"><img src="images/logo.png" alt="StatsCraft"></a>
+                </div>
+                <div class="menu-wrap menu-icons">
+                    <a href="#" title="Menu" id="btn-menu" class="btn-menu toggle-switch toggle-switch-ht" data-icon-name="hamburgerCross"><span>Toggle menu</span></a>
+                </div>
+                <div id="menu" class="menu">
+                    <nav>
+                        <ul>
+                            <li> <a href="#agenda">Agenda</a> </li>
+                            <li> <a href="#tickets">Tickets</a> </li>
+                            <li> <a href="#venue">Venue</a> </li>
+                            <li> <a href="#about">About</a> </li>
+                            <li> <a href="#sponsors">Sponsors</a> </li>
+                            <li> <a href="#contact">Contact</a> </li>
+                        </ul>
+                    </nav>
+                </div><!-- menu -->
+            </div><!-- .top-head ends -->
+            <div class="banner">
+                <div class="container">
+                    <h1>Monitoring conference for Ops, developers, PMs and everyone else</h1>
+                    <p><a href="https://twitter.com/hashtag/monitoringlove" style="color:white;">#monitoringlove</a></p>
+                </div>
+            </div><!-- .banner ends -->
+        </header><!-- header ends -->
+
+        <div class="important-note">
+            <span>30<sup>th</sup> July 2015, Google Campus TLV</span> 
+            <a href="#tickets" class="ticket-btn" title="Get Tickets">get tickets</a>
+        </div><!-- .important-note ends -->
+
+        <main role="main">
+        <div class="container">
+            <h2 id="about">Show me the metrics!</h2>
+            <p class="description">Monitoring is important. Without monitoring, there can be no feedback, no planning and no improvement. Monitoring is crucial for detecting problems, optimizing performance, capacity planning, improving user experience, improving business impact... the list goes on an on.
+            Yet in many companies, monitoring is an afterthought, neglected and underrated. Companies spend very little time and effort on it, create bad monitoring and then go on to ignore the data they collected completely. We often hear that "monitoring is hard" - and it can be, unless we do something about it. This conference is all about making monitoring easier, more accessible and more productive:
+            <ul class="content-list">
+                <li>What is monitoring</li>
+                <li>How to do monitoring (both tools and methods)</li>
+                <li>How to get the most out of your data</li>
+            </ul>
+            </p>
+            <p class="description">The conference is a local event (Israel) and sessions will be in Hebrew</p>
+            <div class="agenda">
+                <h3>Who is behind this conference?</h3>
+                <a href="#" class="toggle ">toggle</a>
+                <div class="comment-box-wrap" style="display:none;" >
+                    <p class="description">This conference is a community effort by and for people who do monitoring daily and care about monitoring. The organizing committee are all volunteers and sponshorships cover the direct costs of the conference
+                    </p>
+                    <h4>Organizing committee</h4>
+
+                    <div class="comment-box-row">
+                        <ul class="content-list">
+                            <li>Nir Cohen (Gigaspaces)</li>
+                            <li>Michael Sverdlik (Gigaspaces)</li>
+                            <li>Shahar Kedar (BigPanda)</li>
+                            <li>Erik Zaadi (BigPanda)</li>
+                            <li>Amit Cohen (Fewbytes)</li>
+                            <li>Avishai Ish-Shalom (Fewbytes)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agenda" id="agenda">
+                <h2>Agenda</h2>
+                {% for talk in site.data.talks %}
+                <div class="row{% if forloop.index0 == 0 %} first-border{%endif %}">
+                    {% include {{talk.type}}.html talk=talk %}
+                </div><!-- .row ends -->
+                {% endfor %}
+            </div><!-- .agenda ends -->
+        </div>
+
+        <div class="ticket-section" id="tickets">
+            <div class="container">
+                <h2>Get your ticket!</h2>
+                <p>So you'd like to be a part of Statscaft 2015? <span>We’d love to see you there!</span></p>
+                <div class="row">
+                    <div class="ticket-alert">
+                        <div class="left-tickets">
+                            <strong>189</strong> 
+                            <span>Tickets left</span>
+                        </div>
+
+                        <div class="your-ticket">
+                            <span>Get Yours</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>Tell your friends</p>
+                    <div class="ssk-group ssk-lg  ssk-count">
+                        <a href="" class="ssk ssk-facebook"><div class="ssk-num">79</div></a>
+                        <a href="" class="ssk ssk-twitter"><div class="ssk-num">104</div></a>
+                        <a href="" class="ssk ssk-google-plus"><div class="ssk-num">21</div></a>
+                    </div>
+                </div>
+                <!--      <div class="share">
+                    <p>Tell your friends</p>
+                    <a href="#" title="Twitter"><img src="images/twitter.png" alt="Twiiter"></a>
+                    <a href="#" title="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="#" title="Google"><img src="images/google.png" alt="Google"></a>
+                    </div>-->
+            </div><!-- .container ends -->
+        </div><!-- .ticket-section ends -->
+
+        <div id="venue" class="venue text-center">
+            <div class="container">
+                <h2>Venue</h2>    
+                <h3>Google Campus TLV</h3>
+                <address>Electra Tower, 98 Yigal Alon St. Tel Aviv, 34<sup>th</sup> Floor</address>
+
+                <div id="canvas1" class="map">
+                    <iframe id="map_canvas1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6762.142146902201!2d34.7942164302785!3d32.06732635798904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b9f0f7ed125%3A0xcd0f8fa9a029cdd8!2sElectra+Tower!5e0!3m2!1sen!2sil!4v1430820774639" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+                </div>
+            </div>
+        </div><!-- venue -->
+
+        <div class="sponsors" id="sponsors">
+            <div class="container">
+                <h2>Sponsors</h2>
+                <ul>
+                    <li><img src="images/sponsors-bigpanda.png" alt="Bigpanda"></li>
+                    <li><img src="images/sponsors-ropes.png" alt="Ropes"></li>
+                </ul>
+            </div>
+        </div><!-- .sponsors ends -->  
+
+        <div id="contact" class="contact text-center">
+            <div class="container">
+                <h2>Contact</h2>
+                <form action="/" method="post" id="contact-form" class="contact-form">
+                    <div class="inline">
+                        <div class="form-row">
+                            <input type="text" id="contact-name" name="name" class="form-control" placeholder="Name">
+                        </div><!-- form-row -->
+
+                        <div class="form-row">
+                            <input type="email" id="contact-email" name="email" class="form-control" placeholder="Email">
+                        </div><!-- form-row -->
+
+                        <div class="form-row">
+                            <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="Phone">
+                        </div><!-- form-row -->
+                    </div><!-- inline -->
+                    <div class="form-row">
+                        <textarea id="contact-feedback" name="feedback" class="form-control" placeholder="Sponsor us - Ask us - Provide feedback"></textarea>
+                    </div><!-- form-row -->
+                    <input type="submit" id="contact-submit" class="contact-submit" name="submit" value="Send">
+                </form>
+            </div>
+        </div><!-- container -->
+        </main><!-- main ends -->
+
+        <footer role="contentinfo">
+            <div class="footer-bottom clearfix">
+                <div class="logo">
+                    <a href="#" title="Statscraft Monitoring Conference"><img src="images/footer-logo.png" alt="Statscraft"></a>
+                </div>
+                <div class="footer-info">
+                    <p>Tel-Aviv July 30<sup>th</sup> </br>2015</p>
+                </div>
+                <ul class="social">
+                    <li><a href="https://www.facebook.com/" title="Facebook" class="facebook">Facebook</a></li>
+                    <li><a href="https://www.twitter.com" title="Twitter" class="twitter">Twitter</a></li>
+                    <li><a href="#" title="Mail" class="mail">Mail</a></li>
+                </ul>
+            </div>
+        </footer><!-- footer ends -->
+
+        <script src="js/jquery-1.11.2.min.js"></script> 
+        <script src="js/modernizr-2.8.3.min.js"></script>
+        <script src="js/menu.js"></script> 
+        <script src="js/main.js"></script>
+        <script>
+$('.toggle, .toggle + h1').click(function(){
+    $(this).parent().children('.comment-box-wrap').slideToggle('slow');
+    $(this).toggleClass('active');
+    return false
+});
+
+        </script>
+        <script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                                                        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','{{ site.data.vars.gaCode }}');ga('send','pageview');
+        </script>
+        --> 
+    </body>
+</html>
